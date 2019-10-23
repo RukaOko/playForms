@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Linking } from 'react-native';
+import { View } from 'react-native';
 
-import SubmitForm from '../custom/SubmitForm';
+import LinkCustom from '../custom/LinkCustom';
 
 const TopLinks = () => (
     <View
@@ -12,36 +12,14 @@ const TopLinks = () => (
             justifyContent: 'space-between'
         }}
     >
-        <SubmitForm 
+        <LinkCustom 
             title="Download APK"
-            handleSubmit={() => {
-                Linking.openURL('http://xopdox.ru/downloadapk');
-            }}
-            styles={{
-                text: {
-                    fontSize: 16,
-                    borderBottomWidth: 1,
-                    borderBottomColor: 'blue',
-                    color: 'blue'
-                }
-            }}
+            href="http://xopdox.ru/downloadapk"
         />
-        
-        <SubmitForm 
+        <LinkCustom 
             title="GitHub"
-            handleSubmit={() => {
-                Linking.openURL('https://github.com/RukaOko/playForms');
-            }}
-            styles={{
-                text: {
-                    fontSize: 16,
-                    borderBottomWidth: 1,
-                    borderBottomColor: 'blue',
-                    color: 'blue'
-                }
-            }}
+            href="https://github.com/RukaOko/playForms"
         />
-        
     </View>
 );
 export default TopLinks;
