@@ -109,6 +109,12 @@ export default class IndexForms extends Component {
                 console.log('Error in '+name+' : '+properties[name].error);
                 break;
             }
+            else if(properties[name].validation && properties[name].validation.required && properties[name].value === '')
+            {
+                error = true;
+                console.log('Error in '+name+' : required');
+                break;
+            }
             else
             {
                 sendData[name] = properties[name].value;
